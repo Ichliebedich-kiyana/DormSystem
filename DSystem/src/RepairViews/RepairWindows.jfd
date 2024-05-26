@@ -1,0 +1,24 @@
+JFDML JFormDesigner: "8.2.3.0.386" Java: "17.0.8.1" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) {
+			"autoSize": false
+		} ) {
+			name: "this"
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button1"
+				"text": "个人信息"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 35
+				"y": 25
+				"width": 105
+				"height": 45
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 110, 25 )
+			"size": new java.awt.Dimension( 400, 300 )
+		} )
+	}
+}

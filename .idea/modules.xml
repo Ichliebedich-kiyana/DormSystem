@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/DSystem/DSystem.iml" filepath="$PROJECT_DIR$/DSystem/DSystem.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DormSystem.iml" filepath="$PROJECT_DIR$/DormSystem.iml" />
+    </modules>
+  </component>
+</project>
