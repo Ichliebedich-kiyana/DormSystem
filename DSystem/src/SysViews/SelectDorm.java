@@ -1,24 +1,23 @@
 /*
- * Created by JFormDesigner on Sat May 25 19:19:17 CST 2024
+ * Created by JFormDesigner on Sun May 26 11:49:14 CST 2024
  */
 
-package DormViews;
+package SysViews;
 
 import cn.login.DatabaseConnection;
 
 import java.awt.*;
-import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import javax.swing.*;
+
 /**
  * @author 86191
  */
-public class SelectStudent extends JFrame {
-    public SelectStudent() {
+public class SelectDorm extends JFrame {
+    public SelectDorm() {
         initComponents();
     }
 
@@ -33,67 +32,54 @@ public class SelectStudent extends JFrame {
         contentPane.setLayout(null);
 
         //---- label1 ----
-        label1.setText("\u8f93\u5165\u5b66\u751f\u5b66\u53f7");
+        label1.setText("\u8f93\u5165\u5bbf\u7ba1\u7f16\u53f7");
         contentPane.add(label1);
-        label1.setBounds(40, 45, 120, label1.getPreferredSize().height);
+        label1.setBounds(40, 40, 90, 55);
         contentPane.add(textField1);
-        textField1.setBounds(150, 40, 95, textField1.getPreferredSize().height);
+        textField1.setBounds(140, 55, 95, textField1.getPreferredSize().height);
 
         //---- button1 ----
-        button1.setText("\u67e5\u8be2");
+        button1.setText("\u67e5\u627e");
         contentPane.add(button1);
-        button1.setBounds(new Rectangle(new Point(60, 85), button1.getPreferredSize()));
-        button1.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                // 获取文本框中输入的学生学号
-                String studentId = textField1.getText().trim();
-
-                // 查询学生信息并显示在弹窗中
-                displayStudentInfo(studentId);
-            }
-        });
+        button1.setBounds(new Rectangle(new Point(50, 120), button1.getPreferredSize()));
+        button1.addActionListener(e -> displayStudentInfo(textField1.getText()));
         contentPane.setPreferredSize(new Dimension(400, 300));
         pack();
         setLocationRelativeTo(getOwner());
         // JFormDesigner - End of component initialization  //GEN-END:initComponents  @formatter:on
-
     }
-
-    private void displayStudentInfo(String studentId) {
+    private void displayStudentInfo(String dormId) {
         try {
             // 获取数据库连接
             Connection connection =  DatabaseConnection.getConnection();
 
             // 准备 SQL 查询语句
-            String query = "SELECT * FROM student WHERE id = ?";
+            String query = "SELECT * FROM dorm WHERE id = ?";
 
             // 创建 PreparedStatement 对象
             PreparedStatement statement = connection.prepareStatement(query);
 
             // 设置参数
-            statement.setString(1, studentId);
+            statement.setString(1, dormId);
 
             // 执行查询
             ResultSet resultSet = statement.executeQuery();
 
             if (resultSet.next()) {
-                // 如果查询到结果，则获取学生信息
+                // 如果查询到结果，则获取宿管信息
                 int id = resultSet.getInt("id");
                 String name = resultSet.getString("name");
                 int age = resultSet.getInt("age");
-                String dormid = resultSet.getString("dormid");
                 String area = resultSet.getString("area");
                 // 在弹窗中显示学生信息
                 JOptionPane.showMessageDialog(this,
-                        "学号 " + id + "\n" +
-                                "姓名" + name + "\n" +
-                                "年龄" + age + "\n" +
-                                "宿舍号" + dormid +"\n"+
-                                "宿舍所在区域" + area);
+                        "编号" + id + "\n" +
+                                "姓名 " + name + "\n" +
+                                "年龄 " + age +"\n" +
+                                "所管理区域" + area);
             } else {
                 // 如果未查询到结果，显示提示信息
-                JOptionPane.showMessageDialog(this, "未找到对应学生信息");
+                JOptionPane.showMessageDialog(this, "未找到对应宿管信息");
             }
 
             // 关闭连接和语句

@@ -15,21 +15,25 @@ public class SelfMessage extends JFrame {
     private void displayUserInfo() {
         try {
             Connection connection = DatabaseConnection.getConnection();
-            String query = "SELECT id, name, age FROM student limit 1";
+            String query = "SELECT id, name, age ,dormid,area FROM student limit 1";
             PreparedStatement statement = connection.prepareStatement(query);
             ResultSet resultSet = statement.executeQuery();
 
             StringBuilder sb = new StringBuilder();
-            sb.append("<html>编号\t姓名\t年龄<br>");
+            sb.append("<html>编号\t姓名\t年龄\t宿舍号\t宿舍所在区域<br>");
 
             while (resultSet.next()) {
                 int id = resultSet.getInt("id");
                 String name = resultSet.getString("name");
                 int age = resultSet.getInt("age");
-
+                String dormid=resultSet.getString("dormid");
+                String area =resultSet.getString("area");
                 sb.append(id).append("\t");
                 sb.append(name).append("\t");
-                sb.append(age).append("<br>");
+                sb.append(age).append("\t");
+                sb.append(dormid).append("\t");
+                sb.append(area).append("<br>");
+
             }
             sb.append("</html>");
 

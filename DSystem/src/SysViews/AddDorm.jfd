@@ -7,131 +7,107 @@ new FormModel {
 			"autoSize": false
 		} ) {
 			name: "this"
+			"title": "添加宿管信息"
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "label1"
-				"text": "添加学生信息"
+				"text": "用户名"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 10
-				"y": 15
-				"width": 135
+				"x": 25
+				"y": 25
+				"width": 55
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "label2"
-				"text": "用户名"
+				"text": "密码"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 15
-				"y": 50
-				"width": 60
+				"x": 30
+				"y": 65
+				"width": 45
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "label3"
-				"text": "密码"
+				"text": "编号"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 15
-				"y": 90
-				"width": 50
+				"x": 30
+				"y": 110
+				"width": 45
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "label4"
-				"text": "学号"
-			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 15
-				"y": 125
-				"width": 40
-			} )
-			add( new FormComponent( "javax.swing.JLabel" ) {
-				name: "label5"
 				"text": "姓名"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 15
-				"y": 165
+				"x": 30
+				"y": 145
 				"width": 50
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
-				name: "label6"
+				name: "label5"
 				"text": "年龄"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 10
-				"y": 210
+				"x": 30
+				"y": 185
 				"width": 40
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "textField1"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 75
-				"y": 45
-				"width": 90
+				"x": 105
+				"y": 25
+				"width": 85
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "textField2"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 75
-				"y": 85
-				"width": 90
+				"x": 105
+				"y": 70
+				"width": 85
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "textField3"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 75
-				"y": 125
+				"x": 105
+				"y": 115
 				"width": 85
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "textField4"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 75
-				"y": 165
+				"x": 105
+				"y": 155
 				"width": 85
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "textField5"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 75
-				"y": 205
-				"width": 90
+				"x": 105
+				"y": 195
+				"width": 95
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button1"
-				"text": "添加"
+				"text": "确认添加"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 235
-				"y": 190
+				"x": 250
+				"y": 110
+				"width": 90
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
-				name: "label7"
-				"text": "宿舍号"
+				name: "label6"
+				"text": "所管理区域"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 205
-				"y": 50
-				"width": 55
-				"height": 25
-			} )
-			add( new FormComponent( "javax.swing.JLabel" ) {
-				name: "label8"
-				"text": "楼栋号"
-			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 205
-				"y": 95
-				"width": 40
-				"height": 22
+				"x": 15
+				"y": 250
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "textField6"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 265
-				"y": 55
-				"width": 75
-			} )
-			add( new FormComponent( "javax.swing.JTextField" ) {
-				name: "textField7"
-			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 270
-				"y": 100
-				"width": 65
+				"x": 110
+				"y": 245
+				"width": 85
 			} )
 		}, new FormLayoutConstraints( null ) {
-			"location": new java.awt.Point( 70, 40 )
-			"size": new java.awt.Dimension( 400, 300 )
+			"location": new java.awt.Point( 10, 0 )
+			"size": new java.awt.Dimension( 400, 335 )
 		} )
 	}
 }

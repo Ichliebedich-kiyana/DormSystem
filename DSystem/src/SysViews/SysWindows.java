@@ -4,7 +4,11 @@
 
 package SysViews;
 
+import DormViews.DselfMessage;
+
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.*;
 
 /**
@@ -14,7 +18,27 @@ public class SysWindows extends JFrame {
     public SysWindows() {
         initComponents();
     }
+    private void button1ActionPerformed(ActionEvent e) {
+        // 打开 DselfMessage 窗口
+        new SMessage().setVisible(true);
+    }
 
+    private void button2ActionPerformed(ActionEvent e) {
+        // 打开 DselfMessage 窗口
+        new AddDorm().setVisible(true);
+    }
+
+    private  void button3ActionPerformed(ActionEvent e){
+        new DeleteDorm().setVisible(true);
+    }
+
+    private  void button4ActionPerformed(ActionEvent e){
+        new SelectDorm().setVisible(true);
+    }
+
+    private void button5ActionPerformed(ActionEvent e){
+        new UpdateDorm().setVisible(true);
+    }
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         button1 = new JButton();
@@ -35,22 +59,22 @@ public class SysWindows extends JFrame {
         //---- button2 ----
         button2.setText("\u65b0\u589e\u5bbf\u7ba1");
         contentPane.add(button2);
-        button2.setBounds(50, 70, 105, button2.getPreferredSize().height);
+        button2.setBounds(45, 70, 105, button2.getPreferredSize().height);
 
         //---- button3 ----
         button3.setText("\u5220\u9664\u5bbf\u7ba1\u4fe1\u606f");
         contentPane.add(button3);
-        button3.setBounds(60, 115, 90, button3.getPreferredSize().height);
+        button3.setBounds(50, 115, 90, button3.getPreferredSize().height);
 
         //---- button4 ----
         button4.setText("\u67e5\u770b\u5bbf\u7ba1\u4fe1\u606f");
         contentPane.add(button4);
-        button4.setBounds(new Rectangle(new Point(55, 160), button4.getPreferredSize()));
+        button4.setBounds(new Rectangle(new Point(45, 165), button4.getPreferredSize()));
 
         //---- button5 ----
         button5.setText("\u4fee\u6539\u5bbf\u7ba1\u4fe1\u606f");
         contentPane.add(button5);
-        button5.setBounds(55, 210, 105, button5.getPreferredSize().height);
+        button5.setBounds(50, 210, 105, button5.getPreferredSize().height);
 
         contentPane.setPreferredSize(new Dimension(400, 300));
         pack();
