@@ -5,8 +5,6 @@
 package SysViews;
 
 
-
-
 import cn.login.DatabaseConnection;
 
 import java.awt.*;
@@ -14,6 +12,8 @@ import java.sql.*;
 import javax.swing.*;
 
 public class SMessage extends JFrame {
+    private JLabel labelInfo;
+
     public SMessage() {
         initComponents();
         displayUserInfo();
@@ -53,17 +53,17 @@ public class SMessage extends JFrame {
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
-
+        labelInfo = new JLabel();
         //======== this ========
         var contentPane = getContentPane();
         contentPane.setLayout(null);
 
+        labelInfo.setVerticalAlignment(SwingConstants.TOP);
+        contentPane.add(labelInfo);
+        labelInfo.setBounds(30, 30, 340, 200);
         contentPane.setPreferredSize(new Dimension(400, 300));
         pack();
         setLocationRelativeTo(getOwner());
         // JFormDesigner - End of component initialization  //GEN-END:initComponents  @formatter:on
     }
-
-    // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
-    // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }
