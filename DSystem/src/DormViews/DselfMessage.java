@@ -7,9 +7,6 @@ package DormViews;
  */
 
 
-
-
-
 import cn.login.DatabaseConnection;
 
 import java.awt.*;
@@ -27,13 +24,9 @@ public class DselfMessage extends JFrame {
         try {
             // 获取数据库连接
             Connection connection = DatabaseConnection.getConnection();
-<<<<<<< HEAD
-            String query = "SELECT name, id, age ,area FROM dorm limit 1";
-=======
 
             // 定义查询语句
-            String query = "SELECT * FROM dorm";
->>>>>>> zhong
+            String query = "SELECT name, id, age ,area FROM dorm limit 1";
             PreparedStatement statement = connection.prepareStatement(query);
             ResultSet resultSet = statement.executeQuery();
 
@@ -53,12 +46,12 @@ public class DselfMessage extends JFrame {
             }
             sb.append("</html>");
 
-<<<<<<< HEAD
+
             labelInfo.setText(sb.toString());
-=======
+
             // 在对话框中显示信息
             JOptionPane.showMessageDialog(this, sb.toString(), "学生信息", JOptionPane.INFORMATION_MESSAGE);
->>>>>>> zhong
+
 
             resultSet.close();
             statement.close();

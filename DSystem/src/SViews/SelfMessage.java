@@ -18,24 +18,22 @@ public class SelfMessage extends JFrame {
         try {
             // 连接数据库
             Connection connection = DatabaseConnection.getConnection();
-<<<<<<< HEAD
-            String query = "SELECT id, name, age ,dormid,area FROM student limit 1";
-=======
+
             // 定义查询SQL
-            String query = "SELECT id, name, age FROM student limit 1";
+            String query = "SELECT id, name, age ,dormid,area FROM student limit 1";
+
             // 处理SQL语句
->>>>>>> zhong
             PreparedStatement statement = connection.prepareStatement(query);
             // 存储查询结果
             ResultSet resultSet = statement.executeQuery();
 
             StringBuilder sb = new StringBuilder();
-<<<<<<< HEAD
+
             sb.append("<html>编号\t姓名\t年龄\t宿舍号\t宿舍所在区域<br>");
-=======
+
             // 格式化为HTML字符串
             sb.append("<html>编号\t姓名\t年龄<br>");
->>>>>>> zhong
+
 
             while (resultSet.next()) {
                 // 获得查询id
@@ -44,13 +42,12 @@ public class SelfMessage extends JFrame {
                 String name = resultSet.getString("name");
                 // 获得查询年龄
                 int age = resultSet.getInt("age");
-<<<<<<< HEAD
+
                 String dormid=resultSet.getString("dormid");
                 String area =resultSet.getString("area");
-=======
+
 
                 // 格式化拼接字符串
->>>>>>> zhong
                 sb.append(id).append("\t");
                 sb.append(name).append("\t");
                 sb.append(age).append("\t");

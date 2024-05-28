@@ -45,9 +45,9 @@ public class DeleteStudent extends JFrame {
         button1.setText("\u5220\u9664");
         contentPane.add(button1);
         button1.setBounds(60, 115, 95, button1.getPreferredSize().height);
-<<<<<<< HEAD
+
         button1.addActionListener(e -> deleteStudent(textField1.getText())); // 绑定动作监听器
-=======
+
         button1.addActionListener(new ActionListener() {
             @Override public void actionPerformed(ActionEvent e) {
                 // 获得被删除学生的学号
@@ -55,7 +55,7 @@ public class DeleteStudent extends JFrame {
                 deleteStudent(studentid);
     }});
 
->>>>>>> zhong
+
         contentPane.setPreferredSize(new Dimension(400, 300));
         pack();
         setLocationRelativeTo(getOwner());

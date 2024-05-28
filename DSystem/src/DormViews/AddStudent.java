@@ -118,12 +118,10 @@ public class AddStudent extends JFrame {
         try {
             // 调用DatabaseConnection类静态方法，连接数据库
             Connection connection = DatabaseConnection.getConnection();
-<<<<<<< HEAD
-            String query = "INSERT INTO student (username, password, id, name, age,dormid,area) VALUES (?, ?, ?, ?, ?,?,?)";
-=======
+
             // 定义插入SQL，用？作为占位符来插入信息
             String query = "INSERT INTO student (username, password, id, name, age) VALUES (?, ?, ?, ?, ?)";
->>>>>>> zhong
+
             PreparedStatement statement = connection.prepareStatement(query);
             // 更改占位符的信息
             statement.setString(1, username);
