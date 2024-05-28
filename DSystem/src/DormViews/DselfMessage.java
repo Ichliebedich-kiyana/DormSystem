@@ -1,6 +1,4 @@
-/*
- * Created by JFormDesigner on Sat May 25 17:55:18 CST 2024
- */
+/* 个人信息窗口 */
 
 package DormViews;
 
@@ -19,9 +17,13 @@ public class DselfMessage extends JFrame {
         displayUserInfo();
     }
 
+    /* 从数据库中查询用户信息并在一个对话框中显示 */
     private void displayUserInfo() {
         try {
+            // 获取数据库连接
             Connection connection = DatabaseConnection.getConnection();
+
+            // 定义查询语句
             String query = "SELECT * FROM dorm";
             PreparedStatement statement = connection.prepareStatement(query);
             ResultSet resultSet = statement.executeQuery();
@@ -39,7 +41,7 @@ public class DselfMessage extends JFrame {
                 sb.append(age).append("\n");
             }
 
-            // Display the information in a dialog
+            // 在对话框中显示信息
             JOptionPane.showMessageDialog(this, sb.toString(), "学生信息", JOptionPane.INFORMATION_MESSAGE);
 
             resultSet.close();
@@ -51,6 +53,7 @@ public class DselfMessage extends JFrame {
         }
     }
 
+    /* 初始化组件 */
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
 

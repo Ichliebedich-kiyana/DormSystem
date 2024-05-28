@@ -1,3 +1,4 @@
+/* 由JFormDesigner可视化工具生成的界面（之后相似的GUI界面都是这样生成的） */
 package cn.login;
 
 import DormViews.DormWindows;
@@ -21,16 +22,16 @@ public class LoginWindow extends JFrame {
     public LoginWindow() {
         initComponents();
 
-        // Add ActionListener to the Login button
+        // 为登录按钮添加点击事件侦听器
         button1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Retrieve user input
+                // 获得用户输入信息
                 String username = textField1.getText();
                 String password = new String(passwordField1.getPassword());
                 String selectedRole = (String) comboBox1.getSelectedItem();
 
-                // Determine table based on selected role
+                // 下拉菜单，确定登录人员类型
                 String tableName = "";
                 if (selectedRole.equals("学生登陆")) {
                     tableName = "student";
@@ -42,39 +43,45 @@ public class LoginWindow extends JFrame {
                     tableName = "repair";
                 }
 
-                // Query the database
+                // 查询数据库
                 try {
+                    // 调用DatabaseConnection类中的静态方法，建立与数据库的连接
                     Connection connection = DatabaseConnection.getConnection();
+                    // 根据不同的tableName来选择登录角色
                     String query = "SELECT * FROM " + tableName + " WHERE username = ? AND password = ?";
+                    // 实现PreparedStatement接口来执行查询（这个接口可以防止SQL注入攻击）
                     PreparedStatement statement = connection.prepareStatement(query);
                     statement.setString(1, username);
                     statement.setString(2, password);
+
+                    // 执行SQL查询，返回查询结果对象
                     ResultSet resultSet = statement.executeQuery();
 
+                    // 处理查询结果
                     if (resultSet.next()) {
-                        // Login successful
-                        //JOptionPane.showMessageDialog(LoginWindow.this, "登录成功");
+/*                          Login successful
+                        JOptionPane.showMessageDialog(LoginWindow.this, "登录成功"); */
 
                         dispose();
 
+                        // 根据不同的角色打开相应窗口
                         if ("student".equals(tableName)) {
                             new StudentWindows().setVisible(true);
                         } else if ("dorm".equals(tableName)) {
                             new DormWindows().setVisible(true);
-                        }
-                        else if ("sys".equals(tableName)) {
+                        } else if ("sys".equals(tableName)) {
                             // 如果你有 AdminWindows 窗口
                             new SysWindows().setVisible(true);
-                        }
-                        else if ("repair".equals(tableName)) {
+                        } else if ("repair".equals(tableName)) {
                             // 如果你有 RepairWindow 窗口
                             new RepairWindows().setVisible(true);
                         }
                     } else {
-                        // Login failed
+                        // 登录失败
                         JOptionPane.showMessageDialog(LoginWindow.this, "用户名或密码错误");
                     }
 
+                    // 查询结束后及时释放资源
                     resultSet.close();
                     statement.close();
                     connection.close();
@@ -147,6 +154,7 @@ public class LoginWindow extends JFrame {
         // JFormDesigner - End of component initialization  //GEN-END:initComponents  @formatter:on
     }
 
+    // 窗口初始化
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {

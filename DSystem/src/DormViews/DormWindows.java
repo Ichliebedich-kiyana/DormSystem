@@ -1,3 +1,4 @@
+/* 管理系统的主窗口 */
 package DormViews;
 
 import java.awt.*;

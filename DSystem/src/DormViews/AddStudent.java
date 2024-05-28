@@ -1,7 +1,4 @@
-/*
- * Created by JFormDesigner on Sat May 25 19:46:24 CST 2024
- */
-
+/* 添加学生窗口 */
 package DormViews;
 
 import cn.login.DatabaseConnection;
@@ -11,6 +8,7 @@ import javax.swing.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+
 /**
  * @author 86191
  */
@@ -90,7 +88,9 @@ public class AddStudent extends JFrame {
         // JFormDesigner - End of component initialization  //GEN-END:initComponents  @formatter:on
     }
 
+    // 为添加按钮绑点事件
     private void addButtonActionPerformed() {
+        // 获取新增学生的信息
         String username = textField1.getText();
         String password = textField2.getText();
         String id = textField3.getText();
@@ -98,9 +98,12 @@ public class AddStudent extends JFrame {
         String age = textField5.getText();
 
         try {
+            // 调用DatabaseConnection类静态方法，连接数据库
             Connection connection = DatabaseConnection.getConnection();
+            // 定义插入SQL，用？作为占位符来插入信息
             String query = "INSERT INTO student (username, password, id, name, age) VALUES (?, ?, ?, ?, ?)";
             PreparedStatement statement = connection.prepareStatement(query);
+            // 更改占位符的信息
             statement.setString(1, username);
             statement.setString(2, password);
             statement.setString(3, id);
@@ -121,6 +124,7 @@ public class AddStudent extends JFrame {
             JOptionPane.showMessageDialog(this, "数据库操作失败");
         }
     }
+
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
     private JLabel label1;
     private JLabel label2;

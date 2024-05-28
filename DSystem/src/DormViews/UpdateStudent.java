@@ -1,3 +1,4 @@
+/* 更新学生信息窗口 */
 package DormViews;
 
 import cn.login.DatabaseConnection;
@@ -102,6 +103,7 @@ public class UpdateStudent extends JFrame {
     }
 
     private void updateButtonActionPerformed(ActionEvent e) {
+        // 获取更新学生信息
         String id = textField3.getText();
         String username = textField4.getText();
         String password = textField5.getText();
@@ -110,38 +112,38 @@ public class UpdateStudent extends JFrame {
         String age = textField8.getText();
 
         try {
-            // Validate inputs
+            // 验证输入（将String对象转换为int型）
             int parsedNewId = Integer.parseInt(newId);
             int parsedAge = Integer.parseInt(age);
 
-            // Get database connection
+            // 连接数据库
             Connection connection = DatabaseConnection.getConnection();
 
-            // Prepare SQL update statement
+            // SQL语句
             String query = "UPDATE student SET username = ?, password = ?, id = ?, name = ?, age = ? WHERE id = ?";
 
-            // Create PreparedStatement object
+            // 处理SQL语句
             PreparedStatement statement = connection.prepareStatement(query);
 
-            // Set parameters
+            // 将信息信息填入占位符中
             statement.setString(1, username);
             statement.setString(2, password);
             statement.setInt(3, parsedNewId);
             statement.setString(4, name);
             statement.setInt(5, parsedAge);
-            statement.setString(6, id); // Original ID for the WHERE clause
+            statement.setString(6, id); // WHERE中的初始id
 
-            // Execute update operation
+            // 执行更新操作,返回更新的行数
             int rowsAffected = statement.executeUpdate();
 
-            // Provide user feedback
+            // 提供用户反馈
             if (rowsAffected > 0) {
                 JOptionPane.showMessageDialog(this, "学生信息更新成功");
             } else {
                 JOptionPane.showMessageDialog(this, "未找到要更新的学生信息");
             }
 
-            // Close resources
+            // 及时释放资源
             statement.close();
             connection.close();
         } catch (NumberFormatException ex) {
