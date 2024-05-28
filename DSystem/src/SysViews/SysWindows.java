@@ -1,7 +1,3 @@
-/*
- * Created by JFormDesigner on Sat May 25 17:22:42 CST 2024
- */
-
 package SysViews;
 
 import DormViews.DselfMessage;

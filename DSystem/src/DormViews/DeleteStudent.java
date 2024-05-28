@@ -1,3 +1,4 @@
+/* 删除学生 */
 /*
  * Created by JFormDesigner on Sat May 25 20:06:42 CST 2024
  */
@@ -44,27 +45,38 @@ public class DeleteStudent extends JFrame {
         button1.setText("\u5220\u9664");
         contentPane.add(button1);
         button1.setBounds(60, 115, 95, button1.getPreferredSize().height);
+<<<<<<< HEAD
         button1.addActionListener(e -> deleteStudent(textField1.getText())); // 绑定动作监听器
+=======
+        button1.addActionListener(new ActionListener() {
+            @Override public void actionPerformed(ActionEvent e) {
+                // 获得被删除学生的学号
+                String studentid = textField1.getText().trim();
+                deleteStudent(studentid);
+    }});
+
+>>>>>>> zhong
         contentPane.setPreferredSize(new Dimension(400, 300));
         pack();
         setLocationRelativeTo(getOwner());
         // JFormDesigner - End of component initialization  //GEN-END:initComponents  @formatter:on
     }
+
     private void deleteStudent(String studentId) {
         try {
-            // Get database connection
+            // 连接数据库
             Connection connection = DatabaseConnection.getConnection();
 
-            // Prepare SQL delete statement
+            // 定义删除语句，跟addStudent中一样，用?作为占位符，暂时顶替被删除学生的学号
             String query = "DELETE FROM student WHERE id = ?";
 
-            // Create PreparedStatement object
+            // 创建执行SQL对象，防止SQL注入
             PreparedStatement statement = connection.prepareStatement(query);
 
-            // Set parameter
+            // 用被删除学生的学号来替换占位符
             statement.setString(1, studentId);
 
-            // Execute update (delete) operation
+            // 执行删除操作，返回被删除的行数
             int rowsAffected = statement.executeUpdate();
 
             if (rowsAffected > 0) {
@@ -73,7 +85,7 @@ public class DeleteStudent extends JFrame {
                 JOptionPane.showMessageDialog(this, "未找到要删除的学生信息");
             }
 
-            // Close resources
+            // 及时释放资源
             statement.close();
             connection.close();
         } catch (SQLException ex) {
@@ -81,7 +93,6 @@ public class DeleteStudent extends JFrame {
             JOptionPane.showMessageDialog(this, "数据库操作失败: " + ex.getMessage());
         }
     }
-
 
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off

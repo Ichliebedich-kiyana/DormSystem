@@ -1,6 +1,4 @@
-/*
- * Created by JFormDesigner on Sat May 25 19:19:17 CST 2024
- */
+/* 查询学生信息界面 */
 
 package DormViews;
 
@@ -14,6 +12,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
 /**
  * @author 86191
  */
@@ -63,12 +62,12 @@ public class SelectStudent extends JFrame {
     private void displayStudentInfo(String studentId) {
         try {
             // 获取数据库连接
-            Connection connection =  DatabaseConnection.getConnection();
+            Connection connection = DatabaseConnection.getConnection();
 
-            // 准备 SQL 查询语句
+            // 准备SQL查询语句
             String query = "SELECT * FROM student WHERE id = ?";
 
-            // 创建 PreparedStatement 对象
+            // 创建PreparedStatement接口实现对象，处理SQL
             PreparedStatement statement = connection.prepareStatement(query);
 
             // 设置参数
@@ -105,6 +104,7 @@ public class SelectStudent extends JFrame {
             JOptionPane.showMessageDialog(this, "数据库查询出错");
         }
     }
+
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
     private JLabel label1;
     private JTextField textField1;

@@ -1,6 +1,3 @@
-/*
- * Created by JFormDesigner on Sat May 25 15:31:37 CST 2024
- */
 
 package SViews;
 
