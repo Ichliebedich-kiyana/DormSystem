@@ -9,7 +9,7 @@ public class DatabaseConnection {
     // 数据库位置/数据库（架构）名
     private static final String URL = "jdbc:mysql://localhost:3306/db02";
     private static final String USER = "root";
-//    private static final String PASSWORD = "chulian123";
+//   private static final String PASSWORD = "chulian123";
     private static final String PASSWORD = "123123123";
 
     // 定义静态方法（方便使用类名.直接调用）

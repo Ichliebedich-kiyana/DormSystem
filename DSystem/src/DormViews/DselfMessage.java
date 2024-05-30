@@ -64,17 +64,10 @@ public class DselfMessage extends JFrame {
     /* 初始化组件 */
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
-        labelInfo = new JLabel();
 
         //======== this ========
-        setTitle("\u5b66\u751f\u4fe1\u606f"); // 学生信息
         var contentPane = getContentPane();
         contentPane.setLayout(null);
-
-        //---- labelInfo ----
-        labelInfo.setVerticalAlignment(SwingConstants.TOP);
-        contentPane.add(labelInfo);
-        labelInfo.setBounds(30, 30, 340, 200);
 
         contentPane.setPreferredSize(new Dimension(400, 300));
         pack();
@@ -83,6 +76,5 @@ public class DselfMessage extends JFrame {
     }
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
-    private JLabel labelInfo;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }
