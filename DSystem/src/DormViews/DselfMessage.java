@@ -1,15 +1,10 @@
-/*
- * Created by JFormDesigner on Sat May 25 17:55:18 CST 2024
- */
+/* 个人信息窗口 */
 
 package DormViews;
 
 /*
  * Created by JFormDesigner on Sun May 26 11:15:15 CST 2024
  */
-
-
-
 
 
 import cn.login.DatabaseConnection;
@@ -24,9 +19,13 @@ public class DselfMessage extends JFrame {
         displayUserInfo();
     }
 
+    /* 从数据库中查询用户信息并在一个对话框中显示 */
     private void displayUserInfo() {
         try {
+            // 获取数据库连接
             Connection connection = DatabaseConnection.getConnection();
+
+            // 定义查询语句
             String query = "SELECT name, id, age ,area FROM dorm limit 1";
             PreparedStatement statement = connection.prepareStatement(query);
             ResultSet resultSet = statement.executeQuery();
@@ -47,7 +46,12 @@ public class DselfMessage extends JFrame {
             }
             sb.append("</html>");
 
+
             labelInfo.setText(sb.toString());
+
+            // 在对话框中显示信息
+            JOptionPane.showMessageDialog(this, sb.toString(), "学生信息", JOptionPane.INFORMATION_MESSAGE);
+
 
             resultSet.close();
             statement.close();
@@ -57,19 +61,13 @@ public class DselfMessage extends JFrame {
         }
     }
 
+    /* 初始化组件 */
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
-        labelInfo = new JLabel();
 
         //======== this ========
-        setTitle("\u5b66\u751f\u4fe1\u606f"); // 学生信息
         var contentPane = getContentPane();
         contentPane.setLayout(null);
-
-        //---- labelInfo ----
-        labelInfo.setVerticalAlignment(SwingConstants.TOP);
-        contentPane.add(labelInfo);
-        labelInfo.setBounds(30, 30, 340, 200);
 
         contentPane.setPreferredSize(new Dimension(400, 300));
         pack();
@@ -78,6 +76,5 @@ public class DselfMessage extends JFrame {
     }
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
-    private JLabel labelInfo;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }

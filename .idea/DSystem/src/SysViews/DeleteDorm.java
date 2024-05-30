@@ -1,26 +1,22 @@
-/* 删除学生 */
 /*
- * Created by JFormDesigner on Sat May 25 20:06:42 CST 2024
+ * Created by JFormDesigner on Sun May 26 11:38:49 CST 2024
  */
 
-package DormViews;
+package SysViews;
 
 import cn.login.DatabaseConnection;
 
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.*;
 
 /**
  * @author 86191
  */
-public class DeleteStudent extends JFrame {
-    public DeleteStudent() {
+public class DeleteDorm extends JFrame {
+    public DeleteDorm() {
         initComponents();
     }
 
@@ -35,57 +31,46 @@ public class DeleteStudent extends JFrame {
         contentPane.setLayout(null);
 
         //---- label1 ----
-        label1.setText("\u8f93\u5165\u5b66\u751f\u7684\u5b66\u53f7");
+        label1.setText("\u8f93\u5165\u5bbf\u7ba1\u7f16\u53f7");
         contentPane.add(label1);
-        label1.setBounds(25, 55, 115, label1.getPreferredSize().height);
+        label1.setBounds(35, 55, 95, label1.getPreferredSize().height);
         contentPane.add(textField1);
-        textField1.setBounds(135, 50, 135, textField1.getPreferredSize().height);
+        textField1.setBounds(140, 50, 90, textField1.getPreferredSize().height);
 
         //---- button1 ----
-        button1.setText("\u5220\u9664");
+        button1.setText("\u786e\u5b9a\u5220\u9664");
         contentPane.add(button1);
-        button1.setBounds(60, 115, 95, button1.getPreferredSize().height);
-
-        button1.addActionListener(e -> deleteStudent(textField1.getText())); // 绑定动作监听器
-
-        button1.addActionListener(new ActionListener() {
-            @Override public void actionPerformed(ActionEvent e) {
-                // 获得被删除学生的学号
-                String studentid = textField1.getText().trim();
-                deleteStudent(studentid);
-    }});
-
-
+        button1.setBounds(new Rectangle(new Point(55, 125), button1.getPreferredSize()));
+        button1.addActionListener(e -> deleteStudent(textField1.getText()));
         contentPane.setPreferredSize(new Dimension(400, 300));
         pack();
         setLocationRelativeTo(getOwner());
         // JFormDesigner - End of component initialization  //GEN-END:initComponents  @formatter:on
     }
-
     private void deleteStudent(String studentId) {
         try {
-            // 连接数据库
+            // Get database connection
             Connection connection = DatabaseConnection.getConnection();
 
-            // 定义删除语句，跟addStudent中一样，用?作为占位符，暂时顶替被删除学生的学号
-            String query = "DELETE FROM student WHERE id = ?";
+            // Prepare SQL delete statement
+            String query = "DELETE FROM dorm WHERE id = ?";
 
-            // 创建执行SQL对象，防止SQL注入
+            // Create PreparedStatement object
             PreparedStatement statement = connection.prepareStatement(query);
 
-            // 用被删除学生的学号来替换占位符
+            // Set parameter
             statement.setString(1, studentId);
 
-            // 执行删除操作，返回被删除的行数
+            // Execute update (delete) operation
             int rowsAffected = statement.executeUpdate();
 
             if (rowsAffected > 0) {
-                JOptionPane.showMessageDialog(this, "学生信息删除成功");
+                JOptionPane.showMessageDialog(this, "宿管信息删除成功");
             } else {
-                JOptionPane.showMessageDialog(this, "未找到要删除的学生信息");
+                JOptionPane.showMessageDialog(this, "未找到要删除的宿管信息");
             }
 
-            // 及时释放资源
+            // Close resources
             statement.close();
             connection.close();
         } catch (SQLException ex) {
@@ -93,7 +78,6 @@ public class DeleteStudent extends JFrame {
             JOptionPane.showMessageDialog(this, "数据库操作失败: " + ex.getMessage());
         }
     }
-
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
     private JLabel label1;

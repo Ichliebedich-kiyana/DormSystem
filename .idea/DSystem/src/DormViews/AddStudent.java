@@ -120,7 +120,7 @@ public class AddStudent extends JFrame {
             Connection connection = DatabaseConnection.getConnection();
 
             // 定义插入SQL，用？作为占位符来插入信息
-            String query = "INSERT INTO student (username, password, id, name, age) VALUES (?, ?, ?, ?, ?)";
+            String query = "INSERT INTO student (username, password, id, name, age,dormid,area) VALUES (?, ?, ?, ?, ?,?,?)";
 
             PreparedStatement statement = connection.prepareStatement(query);
             // 更改占位符的信息
