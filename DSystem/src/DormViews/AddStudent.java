@@ -5,6 +5,8 @@ import cn.login.DatabaseConnection;
 
 import java.awt.*;
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -84,7 +86,7 @@ public class AddStudent extends JFrame {
         button1.setText("\u6dfb\u52a0");
         contentPane.add(button1);
         button1.setBounds(new Rectangle(new Point(235, 190), button1.getPreferredSize()));
-        button1.addActionListener(e -> addButtonActionPerformed());
+
         //---- label7 ----
         label7.setText("\u5bbf\u820d\u53f7");
         contentPane.add(label7);

@@ -72,4 +72,5 @@ public class SMessage extends JFrame {
         setLocationRelativeTo(getOwner());
         // JFormDesigner - End of component initialization  //GEN-END:initComponents  @formatter:on
     }
+
 }

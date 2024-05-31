@@ -7,6 +7,8 @@ package SysViews;
 import cn.login.DatabaseConnection;
 
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -80,7 +82,9 @@ public class AddDorm extends JFrame {
         button1.setText("\u786e\u8ba4\u6dfb\u52a0");
         contentPane.add(button1);
         button1.setBounds(250, 110, 90, button1.getPreferredSize().height);
-        button1.addActionListener(e -> addButtonActionPerformed());
+        button1.addActionListener(new ActionListener() {@Override public void actionPerformed(ActionEvent e) {
+        addButtonActionPerformed();
+    }});
         //---- label6 ----
         label6.setText("\u6240\u7ba1\u7406\u533a\u57df");
         contentPane.add(label6);

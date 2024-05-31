@@ -32,9 +32,10 @@ public class RepairLook extends JFrame {
             while (resultSet.next()) {
                 String area =resultSet.getString("area");
                 String dormid=resultSet.getString("dormid");
-
+                String cause=resultSet.getString("cause");
                 sb.append(area).append("\t");
-                sb.append(dormid).append("<br>");
+                sb.append(dormid).append("\t");
+                sb.append(cause).append("<br>");
 
             }
             sb.append("</html>");
