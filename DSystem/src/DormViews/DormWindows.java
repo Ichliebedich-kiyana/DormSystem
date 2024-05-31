@@ -1,48 +1,61 @@
-/* 管理系统的主窗口 */
 package DormViews;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
+import cn.login.LoginWindow;
+
 
 public class DormWindows extends JFrame {
-    public DormWindows() {
+    private String username;
+    private String password;
+
+    public DormWindows(String username, String password) {
+        this.username = username;
+        this.password = password;
         initComponents();
     }
 
     private void button1ActionPerformed(ActionEvent e) {
-        // 打开 DselfMessage 窗口
-        new DselfMessage().setVisible(true);
+        // Open DselfMessage window
+        new DselfMessage(username, password).setVisible(true);
     }
 
     private void button2ActionPerformed(ActionEvent e) {
-        // 打开 SelectStudent 窗口
+        // Open SelectStudent window
         new SelectStudent().setVisible(true);
     }
 
     private void button3ActionPerformed(ActionEvent e) {
-        // 打开 AddStudent 窗口
+        // Open AddStudent window
         new AddStudent().setVisible(true);
     }
 
     private void button4ActionPerformed(ActionEvent e) {
-        // 打开 DeleteStudent 窗口
+        // Open DeleteStudent window
         new DeleteStudent().setVisible(true);
     }
 
     private void button5ActionPerformed(ActionEvent e) {
-        // 打开 UpdateStudent 窗口
+        // Open UpdateStudent window
         new UpdateStudent().setVisible(true);
     }
 
+    private void button6ActionPerformed(ActionEvent e) {
+        // Log out and open LoginWindow
+        dispose();
+        new LoginWindow().setVisible(true);
+    }
+
     private void initComponents() {
-        // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
+        // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         button1 = new JButton();
         button2 = new JButton();
         button3 = new JButton();
         button4 = new JButton();
         button5 = new JButton();
+        button6 = new JButton();
 
         //======== this ========
         var contentPane = getContentPane();
@@ -103,17 +116,28 @@ public class DormWindows extends JFrame {
         contentPane.add(button5);
         button5.setBounds(30, 215, 145, button5.getPreferredSize().height);
 
+        //---- button6 ----
+        button6.setText("\u9000\u51fa\u767b\u5f55");
+        button6.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                button6ActionPerformed(e);
+            }
+        });
+        contentPane.add(button6);
+        button6.setBounds(250, 115, 90, button6.getPreferredSize().height);
+
         contentPane.setPreferredSize(new Dimension(400, 300));
         pack();
         setLocationRelativeTo(getOwner());
-        // JFormDesigner - End of component initialization  //GEN-END:initComponents  @formatter:on
+        // JFormDesigner - End of component initialization  //GEN-END:initComponents
     }
 
-    // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
     private JButton button1;
     private JButton button2;
     private JButton button3;
     private JButton button4;
     private JButton button5;
-    // JFormDesigner - End of variables declaration  //GEN-END:variables
+    private JButton button6;
+    // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
 }

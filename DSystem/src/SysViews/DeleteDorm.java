@@ -41,8 +41,7 @@ public class DeleteDorm extends JFrame {
         button1.setText("\u786e\u5b9a\u5220\u9664");
         contentPane.add(button1);
         button1.setBounds(new Rectangle(new Point(55, 125), button1.getPreferredSize()));
-        button1.addActionListener(e->deleteStudent(textField1.getText()));
-
+        button1.addActionListener(e -> deleteStudent(textField1.getText()));
         contentPane.setPreferredSize(new Dimension(400, 300));
         pack();
         setLocationRelativeTo(getOwner());

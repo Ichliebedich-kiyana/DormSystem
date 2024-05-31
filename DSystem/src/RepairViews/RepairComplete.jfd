@@ -7,42 +7,47 @@ new FormModel {
 			"autoSize": false
 		} ) {
 			name: "this"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "区域"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 70
+				"y": 40
+				"width": 55
+				"height": 30
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField1"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 140
+				"y": 40
+				"width": 95
+				"height": 35
+			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button1"
-				"text": "个人信息"
+				"text": "完成"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 35
-				"y": 25
-				"width": 105
-				"height": 45
+				"x": 90
+				"y": 145
 			} )
-			add( new FormComponent( "javax.swing.JButton" ) {
-				name: "button2"
-				"text": "查看需要修理的宿舍"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label2"
+				"text": "宿舍号"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 40
-				"y": 95
-				"width": 120
-				"height": 40
+				"x": 55
+				"y": 90
+				"width": 60
 			} )
-			add( new FormComponent( "javax.swing.JButton" ) {
-				name: "button3"
-				"text": "修理完成后取消"
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField2"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 45
-				"y": 160
-				"width": 110
-				"height": 40
-			} )
-			add( new FormComponent( "javax.swing.JButton" ) {
-				name: "button4"
-				"text": "退出登录"
-			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 235
-				"y": 110
+				"x": 140
+				"y": 90
+				"width": 95
 			} )
 		}, new FormLayoutConstraints( null ) {
-			"location": new java.awt.Point( 110, 25 )
+			"location": new java.awt.Point( 0, 0 )
 			"size": new java.awt.Dimension( 400, 300 )
 		} )
 	}

@@ -1,29 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfe61677-b901-4c7b-9934-39f883996d2d" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector_j_8_4_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_j_8_4_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector_j_8_4_0___2_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_j_8_4_0___2_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="0b8a8a87-143c-4314-b2a3-b76fb98ee191" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/DSystem/src/RepairViews/RepairComplete.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DSystem/src/RepairViews/RepairComplete.jfd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DSystem/src/RepairViews/RepairLook.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DSystem/src/RepairViews/RepairLook.jfd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DSystem/src/RepairViews/RsMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DSystem/src/RepairViews/RsMessage.jfd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DSystem/src/SViews/RepairQuest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DSystem/src/SViews/RepairQuest.jfd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DSystem/src/SysViews/AddBuilding.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DSystem/src/SysViews/AddBuilding.jfd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector_j_8_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector_j_8_4_0___2_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/DSystem/DSystem.iml" beforeDir="false" afterPath="$PROJECT_DIR$/DSystem/DSystem.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DSystem/src/DormViews/AddStudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/DSystem/src/DormViews/AddStudent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DSystem/src/DormViews/AddStudent.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/DSystem/src/DormViews/AddStudent.jfd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DSystem/src/DormViews/DeleteStudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/DSystem/src/DormViews/DeleteStudent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DSystem/src/DormViews/DormWindows.java" beforeDir="false" afterPath="$PROJECT_DIR$/DSystem/src/DormViews/DormWindows.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DSystem/src/DormViews/DormWindows.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/DSystem/src/DormViews/DormWindows.jfd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DSystem/src/DormViews/DselfMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/DSystem/src/DormViews/DselfMessage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DSystem/src/DormViews/SelectStudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/DSystem/src/DormViews/SelectStudent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DSystem/src/DormViews/UpdateStudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/DSystem/src/DormViews/UpdateStudent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DSystem/src/DormViews/UpdateStudent.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/DSystem/src/DormViews/UpdateStudent.jfd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DSystem/src/RepairViews/RepairWindows.java" beforeDir="false" afterPath="$PROJECT_DIR$/DSystem/src/RepairViews/RepairWindows.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DSystem/src/RepairViews/RepairWindows.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/DSystem/src/RepairViews/RepairWindows.jfd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DSystem/src/SViews/SelfMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/DSystem/src/SViews/SelfMessage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DSystem/src/SViews/StudentWindows.java" beforeDir="false" afterPath="$PROJECT_DIR$/DSystem/src/SViews/StudentWindows.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DSystem/src/SViews/StudentWindows.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/DSystem/src/SViews/StudentWindows.jfd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DSystem/src/SysViews/AddDorm.java" beforeDir="false" afterPath="$PROJECT_DIR$/DSystem/src/SysViews/AddDorm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DSystem/src/SysViews/AddDorm.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/DSystem/src/SysViews/AddDorm.jfd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DSystem/src/SysViews/DeleteDorm.java" beforeDir="false" afterPath="$PROJECT_DIR$/DSystem/src/SysViews/DeleteDorm.java" afterDir="false" />
@@ -39,7 +49,7 @@
       <change beforePath="$PROJECT_DIR$/DSystem/src/cn/login/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/DSystem/src/cn/login/DatabaseConnection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DSystem/src/cn/login/LoginWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/DSystem/src/cn/login/LoginWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DSystem/src/cn/login/LoginWindow.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/DSystem/src/cn/login/LoginWindow.jfd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DormSystem.iml" beforeDir="false" afterPath="$PROJECT_DIR$/DormSystem.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DormSystem.iml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,10 +59,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 1
-}</component>
-  <component name="ProjectId" id="2h4uV9mk4eEPoyFMXYe86fvBUC1" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="2hDc6CG70OwoFfXdYsiHRQnBmsy" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -62,23 +72,18 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "yuan",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/米奇妙妙屋/学习/报告/数据库/综合实践/暂存/wu增加退出登录/D1/D1/DormSystem",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
+    "last_opened_file_path": "C:/米奇妙妙屋/学习/报告/数据库/综合实践/暂存/终稿/D1/D1/DormSystem",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "库",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "vue.rearranger.settings.migration": "true",
-    "应用程序.LoginWindow.executor": "Run"
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
+        <option value="jdk-1.8.0_402-corretto-1.8.0_402-4caba194b151-ae57be32" />
         <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
       </set>
     </attachedChunks>
@@ -86,17 +91,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="默认任务">
-      <changelist id="cfe61677-b901-4c7b-9934-39f883996d2d" name="更改" comment="" />
-      <created>1716865691960</created>
+      <changelist id="0b8a8a87-143c-4314-b2a3-b76fb98ee191" name="更改" comment="" />
+      <created>1717131910529</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1716865691960</updated>
-      <workItem from="1716865693136" duration="20000" />
-      <workItem from="1716872668718" duration="68000" />
-      <workItem from="1716872846292" duration="1022000" />
-      <workItem from="1716874161317" duration="606000" />
-      <workItem from="1716903544711" duration="116000" />
-      <workItem from="1717039524497" duration="350000" />
+      <updated>1717131910529</updated>
+      <workItem from="1717131911828" duration="44000" />
     </task>
     <servers />
   </component>
