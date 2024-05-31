@@ -66,15 +66,15 @@ public class LoginWindow extends JFrame {
 
                         // 根据不同的角色打开相应窗口
                         if ("student".equals(tableName)) {
-                            new StudentWindows().setVisible(true);
+                            new StudentWindows(textField1.getText(),new String(passwordField1.getPassword())).setVisible(true);
                         } else if ("dorm".equals(tableName)) {
-                            new DormWindows().setVisible(true);
+                            new DormWindows(textField1.getText(),new String(passwordField1.getPassword())).setVisible(true);
                         } else if ("sys".equals(tableName)) {
                             // 如果你有 AdminWindows 窗口
-                            new SysWindows().setVisible(true);
+                            new SysWindows(textField1.getText(),new String(passwordField1.getPassword())).setVisible(true);
                         } else if ("repair".equals(tableName)) {
                             // 如果你有 RepairWindow 窗口
-                            new RepairWindows().setVisible(true);
+                            new RepairWindows(textField1.getText(),new String(passwordField1.getPassword())).setVisible(true);
                         }
                     } else {
                         // 登录失败

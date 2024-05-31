@@ -128,8 +128,8 @@ public class UpdateStudent extends JFrame {
         String username = textField4.getText();
         String password = textField5.getText();
         String newId = textField6.getText();
-        String name = textField7.getText();
-        String age = textField8.getText();
+        String name = textField8.getText();
+        String age = textField7.getText();
         String dormid = textField1.getText();
         String area = textField2.getText();
         try {
@@ -142,7 +142,7 @@ public class UpdateStudent extends JFrame {
 
 
             // SQL语句
-            String query = "UPDATE student SET username = ?, password = ?, id = ?, name = ?, age = ? WHERE id = ?";
+            String query = "UPDATE student SET username = ?, password = ?, id = ?, name = ?, age = ? ,dormid=?,area=? WHERE id = ?";
 
 
             // 处理SQL语句
@@ -159,7 +159,7 @@ public class UpdateStudent extends JFrame {
             statement.setString(7,area);
             statement.setString(8, id); // Original ID for the WHERE clause
 
-            statement.setString(6, id); // WHERE中的初始id
+           // statement.setString(6, id); // WHERE中的初始id
 
 
             // 执行更新操作,返回更新的行数

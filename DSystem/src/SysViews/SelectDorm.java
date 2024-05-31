@@ -41,7 +41,7 @@ public class SelectDorm extends JFrame {
         //---- button1 ----
         button1.setText("\u67e5\u627e");
         contentPane.add(button1);
-        button1.setBounds(new Rectangle(new Point(50, 120), button1.getPreferredSize()));
+        button1.setBounds(new Rectangle(new Point(70, 145), button1.getPreferredSize()));
         button1.addActionListener(e -> displayStudentInfo(textField1.getText()));
         contentPane.setPreferredSize(new Dimension(400, 300));
         pack();

@@ -1,49 +1,41 @@
 /*
- * Created by JFormDesigner on Sun May 26 11:15:15 CST 2024
+ * Created by JFormDesigner on Tue May 28 17:23:46 CST 2024
  */
 
-package SysViews;
-
-
-import cn.login.DatabaseConnection;
+package RepairViews;
 
 import java.awt.*;
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import javax.swing.*;
-
-public class SMessage extends JFrame {
-    private String username;
-    private String password;
-    private JLabel labelInfo;
-
-    public SMessage(String username, String password) {
-        this.username = username;
-        this.password = password;
+import cn.login.DatabaseConnection;
+/**
+ * @author 86191
+ */
+public class RepairLook extends JFrame {
+    public RepairLook() {
         initComponents();
-        displayUserInfo(username, password);
+        Look();
     }
-
-    private void displayUserInfo(String username,String password) {
+    private void Look(){
         try {
             Connection connection = DatabaseConnection.getConnection();
-            String query = "SELECT name, id, age FROM sys WHERE username=? AND password =?";
+            String query = "SELECT * FROM needre JOIN repair ON needre.area = repair.area ";
             PreparedStatement statement = connection.prepareStatement(query);
-            statement.setString(1,username);
-            statement.setString(2,password);
             ResultSet resultSet = statement.executeQuery();
 
             StringBuilder sb = new StringBuilder();
-            sb.append("<html>编号\t姓名\t年龄<br>");
+            sb.append("<html>需要修理宿舍<br>");
 
             while (resultSet.next()) {
+                String area =resultSet.getString("area");
+                String dormid=resultSet.getString("dormid");
 
-                String name = resultSet.getString("name");
-                int id = resultSet.getInt("id");
-                int age = resultSet.getInt("age");
+                sb.append(area).append("\t");
+                sb.append(dormid).append("<br>");
 
-                sb.append(id).append("\t");
-                sb.append(name).append("\t");
-                sb.append(age).append("<br>");
             }
             sb.append("</html>");
 
@@ -55,8 +47,8 @@ public class SMessage extends JFrame {
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
-    }
 
+    }
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         labelInfo = new JLabel();
@@ -72,4 +64,9 @@ public class SMessage extends JFrame {
         setLocationRelativeTo(getOwner());
         // JFormDesigner - End of component initialization  //GEN-END:initComponents  @formatter:on
     }
+    private JLabel labelInfo;
+
+
+    // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
+    // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }
