@@ -74,7 +74,7 @@ public class AddStudent extends JFrame {
         contentPane.add(textField1);
         textField1.setBounds(75, 45, 90, textField1.getPreferredSize().height);
         contentPane.add(textField2);
-        textField2.setBounds(75, 85, 90, textField2.getPreferredSize().height);
+        textField2.setBounds(75, 85, 85, textField2.getPreferredSize().height);
         contentPane.add(textField3);
         textField3.setBounds(75, 125, 85, textField3.getPreferredSize().height);
         contentPane.add(textField4);
@@ -95,11 +95,11 @@ public class AddStudent extends JFrame {
         //---- label8 ----
         label8.setText("\u697c\u680b\u53f7");
         contentPane.add(label8);
-        label8.setBounds(205, 95, 40, 22);
+        label8.setBounds(205, 95, 50, 22);
         contentPane.add(textField6);
         textField6.setBounds(265, 55, 75, textField6.getPreferredSize().height);
         contentPane.add(textField7);
-        textField7.setBounds(270, 100, 65, textField7.getPreferredSize().height);
+        textField7.setBounds(265, 100, 70, textField7.getPreferredSize().height);
 
         contentPane.setPreferredSize(new Dimension(400, 300));
         pack();

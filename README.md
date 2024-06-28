@@ -10,4 +10,4 @@ jdk-21
 
 # 启动程序
 
-完成数据库连接信息修改后，进入模块DSystem/src/cn.login/LoginWindow.java，运行LoginWindow.java即可运行程序
+完成数据库连接信息修改后，进入模块DSystem/src/cn.login/LoginWindow.java，运行LoginWindow.java即可运行程序。

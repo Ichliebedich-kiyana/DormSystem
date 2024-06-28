@@ -140,7 +140,6 @@ public class UpdateStudent extends JFrame {
             // 连接数据库
             Connection connection = DatabaseConnection.getConnection();
 
-
             // SQL语句
             String query = "UPDATE student SET username = ?, password = ?, id = ?, name = ?, age = ? ,dormid=?,area=? WHERE id = ?";
 
